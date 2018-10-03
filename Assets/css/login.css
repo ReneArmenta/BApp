@@ -99,8 +99,12 @@
 #register-form{
     animation-duration: .2s;
 }
-#back-button{
-    color: white;
-    font-size:30px;
-    float: left;
+#btn-cancel{
+    background-color: #ff4d4d !important;
+    color: white !important;
+}
+#btn-cancel:hover{
+    background-color: transparent !important;
+    color: #ff4d4d !important;
+    border: 2px solid #ff4d4d !important;
 }
