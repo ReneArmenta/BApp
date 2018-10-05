@@ -5,7 +5,7 @@ include('../conexion.php');
 
 $nom = htmlspecialchars($_POST["nom"]);
 $num = htmlspecialchars($_POST["num"]);
-$pass = htmlspecialchars($_POST["pass"]);
+$pass = md5(htmlspecialchars($_POST["pass"]));
 $tipo = 0;
 
 
