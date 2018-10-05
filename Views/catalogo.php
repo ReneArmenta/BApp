@@ -2,7 +2,7 @@
     <head>
         <title>BeerApp - login</title>
        
-        <link rel="stylesheet" href="../Assets/css/estilos.css">
+        <link rel="stylesheet" href="../Assets/css/Catalogo.css">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="
@@ -13,40 +13,45 @@
     </head>
     <body>
         <div id="view-catalogo" class="container">
+           <div class="row">
+              <div class="col-9">
+                  <button id="btn_return"><label class="fa fa-angle-left" style="font-size:30px; color:white"></label></button>   
+              </div>
+               <div class="col-3">
+                   <button id="Finalizar"><p>Finalizar</p></button>
+               </div>
+           </div>
             <div class="row">
                 <div class="col-12">
                     <input id="Busqueda" type="text" placeholder="Buscar">
-                    <button><label class="fa fa-arrow-right" style="font-  size:0px;color:white"></label></button>
+                    <button id="Btn_buscar"><label class="fa fa-arrow-right" style="font-  size:30px;color:white"></label></button>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
                 <div class="item">
-                    <div><label class="fa fa-square-o"></label></div>
+                    <img src="../Assets/img/Catalogo/cerveza.png">
+                    <div><p>Cervesa</p></div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="item">
-                    <div><label class="fa fa-square-o"></label></div>
+                    <img src="../Assets/img/Catalogo/coctel%20(3).png">
+                    <div><p>Coolers</p></div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="item">
-                    <div><label class="fa fa-square-o"></label></div>
+                   <img src="../Assets/img/Catalogo/cigarrillo%20(1).png">
+                    <div><p>Cigarros</p></div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="item">
-                    <div><label class="fa fa-square-o"></label></div>
+                    <img src="../Assets/img/Catalogo/patatas.png">
+                    <div><p>Otros</p></div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <footer>
-                    <div class="border"></div>
-                </footer>
             </div>
         </div>
     </body>
