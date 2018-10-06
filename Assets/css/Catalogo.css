@@ -1,0 +1,60 @@
+body{
+    background: url(../img/Catalogo/beer.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+#Busqueda{
+    width: 100%;
+    background-color: transparent;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 1px;
+    margin-right: -31px;
+    margin-left: 0px;
+}
+#view-catalogo button{
+    background-color: transparent;
+    border-left: none !important;
+    border-right: none !important;
+    margin-top: 0px;
+    border-bottom: none;
+    border-top: none;
+    border-radius: 20px;
+    text-align: center;
+}
+.item{
+    border: 1px solid white;
+    height: 150px;
+    margin-left:15px;
+    margin-right: 15px;
+    margin-top: 30Px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 15px;
+}
+.item img{
+width: 100px;
+margin-bottom: 0px;   
+}
+#Finalizar{
+    text-align: center;
+    padding-top: 11px;
+    color:white;
+}
+#btn_return{
+    margin-top: 6px !important;
+}
+.item p{
+    margin-bottom: 0px;
+   font-size:20px; 
+    color: White;
+}
