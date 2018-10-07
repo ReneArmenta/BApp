@@ -23,7 +23,7 @@
                     <input id="login_num" type="tel" placeholder="Numero de teléfono" maxlength="10">
                     <input id="login_pass" type="password" placeholder="Contraseña" maxlength="30">
                     <button id="btn_session" >INICIAR SESIÓN</button>
-                    <p class="new-account-text"><a href="#">Olvide mi contraseña</a></p>
+                    <p class="new-account-text" id="forgot-pass"><a href="#">Olvide mi contraseña</a></p>
                     <div class="border"></div>
                     <p class="new-account-text">¿No tienes cuenta? <a href="#" id="new-account">Crea una aquí</a></p>
                 </div>
@@ -59,4 +59,31 @@
     <script src="../Assets/js/login/main-login.js"></script>
     <script src="../Assets/js/login/register.js"></script>
     <script src="../Assets/js/login/login.js"></script>
+    <script>
+        //Terminar el mensaje y la llamada ajax para poder cambiar la contraseña
+        $("#forgot-pass").on("click",function(){
+            swal({
+              title: 'Escribe tu número de teléfono',
+              input: 'text',
+              inputAttributes: {
+                autocapitalize: 'off'
+              },
+              showCancelButton: true,
+              confirmButtonText: 'Look up',
+              showLoaderOnConfirm: true,
+              preConfirm: (login) => {
+                
+              },
+              allowOutsideClick: () => !swal.isLoading()
+            }).then((result) => {
+              if (result.value) {
+                swal({
+                  title: ,
+                  imageUrl: result.value.avatar_url
+                })
+              }
+            });
+            
+        });
+    </script>
 </html>
