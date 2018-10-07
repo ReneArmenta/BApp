@@ -11,7 +11,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body id="catalogo">
         <div id="view-catalogo" class="container">
           <div id="cabeza">
                <div class="row">
@@ -30,21 +30,21 @@
                 </div>
             </div>
         </div>
-        <div id="item_cat">
+        <div id="item_cat" class="container">
             <div class="row">
-                <div class="col-6">
+                <div class=" col-6">
                     <div class="item">
                         <img src="../Assets/img/Catalogo/cerveza.png">
                         <div><p>Cervesa</p></div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class=" col-6">
                     <div class="item">
                         <img src="../Assets/img/Catalogo/coctel%20(3).png">
                         <div><p>Coolers</p></div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class=" col-6">
                     <div class="item">
                        <img src="../Assets/img/Catalogo/cigarrillo%20(1).png">
                         <div><p>Cigarros</p></div>
@@ -59,7 +59,7 @@
             </div>
         </div>
         <footer>
-           <div id="todo_ese_pedo">
+           <div id="todo_ese_pedo" class="container-fluid">
                 <div class="row">
                     <div class="col-9">
                         <h2 id="Total" style="Color:white">Total:</h2>
