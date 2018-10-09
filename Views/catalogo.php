@@ -12,7 +12,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="../Assets/css/lib/animate.css">
     </head>
-    <body>
+    <body id="catalogo">
         <div id="view-catalogo" class="container">
           <div id="cabeza">
                <div class="row">
@@ -32,7 +32,6 @@
             </div>
         </div>
         
-        
         <div id="item_cat" class="container">
             <div class="row">
                 <div class="col-6">
@@ -41,13 +40,13 @@
                         <div><p>Cerveza</p></div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class=" col-6">
                     <div class="item">
                         <img src="../Assets/img/Catalogo/coctel%20(3).png">
                         <div><p>Coolers</p></div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class=" col-6">
                     <div class="item">
                        <img src="../Assets/img/Catalogo/cigarrillo%20(1).png">
                         <div><p>Cigarros</p></div>
@@ -96,7 +95,7 @@
         
         
         <footer>
-           <div id="todo_ese_pedo">
+           <div id="todo_ese_pedo" class="container-fluid">
                 <div class="row">
                     <div class="col-9">
                         <h2 id="Total" style="Color:white">Total:</h2>

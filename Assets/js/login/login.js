@@ -24,12 +24,7 @@
                                     });
                                }else{
                                    
-                                   swal({
-                                      type: 'success',
-                                      title: 'Sesión iniciada',
-                                      showConfirmButton: false,
-                                      timer: 2000
-                                    });
+                                  window.location.replace("http://localhost:8080/BApp/Views/catalogo.php");
                                  
                                    
                                }

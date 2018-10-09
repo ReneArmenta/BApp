@@ -26,56 +26,63 @@
         var valid = /^[a-zA-Z0-9\-\s]+$/;
             check_Empty()
                 if(check_Empty() == true){
-                     if(valid.test($("#nom").val())){
-           
-                        if(alphanumers.test($("#num").val()) && $("#num").val().length == 10){
-                              var data = {
-                                nom: $("#nom").val(),
-                                num: $("#num").val(),
-                                pass: $("#pass").val()
-                            }
-                    var url = 'http://localhost:8080/BApp/Apis/Users/add_User.php';
-                       $.ajax({
-                           url: url,
-                           type: 'POST',
-                           dataType: 'text',
-                           data: data,
-                           success: function(d){
-                               //manejo de mensajes regresados por ajax.
-                               if(d != 1){
-                                   swal({
+                     if(valid.test($("#nom").val()) && $("#nom").val().length >= 3){
+                        if($("#pass").val().length >= 8){
+                                    if(alphanumers.test($("#num").val()) && $("#num").val().length >= 10){
+                                          var data = {
+                                            nom: $("#nom").val(),
+                                            num: $("#num").val(),
+                                            pass: $("#pass").val()
+                                        }
+                                    var url = 'http://localhost:8080/BApp/Apis/Users/add_User.php';
+                                   $.ajax({
+                                       url: url,
+                                       type: 'POST',
+                                       dataType: 'text',
+                                       data: data,
+                                       success: function(d){
+                                           //manejo de mensajes regresados por ajax.
+                                           if(d != 1){
+                                               swal({
+                                                  type: 'error',
+                                                  title: d,
+                                                  showConfirmButton: true,
+
+                                                });
+                                           }else{
+                                               $(".entryText").val("");
+                                               swal({
+                                                  type: 'success',
+                                                  title: 'Gracias por registrarte',
+                                                  showConfirmButton: false,
+                                                  timer: 2000
+                                                });
+                                               empty_inputs();
+                                               $('#register-form').animateCss('slideOutRight', function() {
+                                                    $('#register-form').css("display","none");
+                                                    $('#login-form').css("display","block");
+                                                    $('#login-form').animateCss('slideInLeft');
+                                                });
+                                           }
+
+
+                                       },
+
+                                   });
+                              }else{
+                                  swal({
                                       type: 'error',
-                                      title: d,
+                                      title: "Agregue un numero de teléfono valido",
                                       showConfirmButton: true,
-
                                     });
-                               }else{
-                                   $(".entryText").val("");
-                                   swal({
-                                      type: 'success',
-                                      title: 'Gracias por registrarte',
-                                      showConfirmButton: false,
-                                      timer: 2000
-                                    });
-                                   empty_inputs();
-                                   $('#register-form').animateCss('slideOutRight', function() {
-                                        $('#register-form').css("display","none");
-                                        $('#login-form').css("display","block");
-                                        $('#login-form').animateCss('slideInLeft');
-                                    });
-                               }
-
-
-                           },
-
-                       });
-                  }else{
-                      swal({
-                          type: 'error',
-                          title: "Agregue un numero de teléfono valido",
-                          showConfirmButton: true,
-                        });
-                  }
+                              }
+                        }else{
+                            swal({
+                              type: 'error',
+                              title: "La contraseña debe tener más de 8 digitos.",
+                              showConfirmButton: true,
+                            });
+                        }
                 }else{
                     swal({
                           type: 'error',
@@ -118,9 +125,9 @@
         return valid_empty;
     }
         
-        function empty_inputs(){
-            $('#nom, #num, #pass, #confirm-pass').val("");
-                                   $('.check_edad').prop('checked',false);
-                                   $('.check_tc').prop('checked',false);
-        }
+    function empty_inputs(){
+        $('#nom, #num, #pass, #confirm-pass').val("");
+        $('.check_edad').prop('checked',false);
+        $('.check_tc').prop('checked',false);
+    }
     
