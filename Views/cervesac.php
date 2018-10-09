@@ -1,8 +1,7 @@
 <html>
     <head>
-        <title>BeerApp - login</title>
        
-        <link rel="stylesheet" href="../Assets/css/Catalogo.css">
+        <link rel="stylesheet" href="../Assets/css/cervesas.css">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="
@@ -30,30 +29,32 @@
                 </div>
             </div>
         </div>
-        <div id="item_cat">
+        <div id="itemControl">
             <div class="row">
-                <div class="col-6">
-                    <div class="item">
-                        <img src="../Assets/img/Catalogo/cerveza.png">
-                        <div><p>Cervesa</p></div>
+                <div class="Col-4">
+                    <div id="item">
+                        <img src="../Assets/img/Cervesas/lata.png">
+                        <p style="color:white">Tecate</p>
+                        </div>
+                    </div>
+                <div class="Col-4">
+                    <div id="item">
+                        <img src="../Assets/img/Cervesas/Bud.png">
+                        <p style="color:white">bud light</p>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="item">
-                        <img src="../Assets/img/Catalogo/coctel%20(3).png">
-                        <div><p>Coolers</p></div>
+                <div class="Col-4">
+                    <div id="item">
+                        <img src="../Assets/img/Cervesas/vino.png">
+                        <p style="color:white">Heineken</p>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="item">
-                       <img src="../Assets/img/Catalogo/cigarrillo%20(1).png">
-                        <div><p>Cigarros</p></div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="item">
-                        <img src="../Assets/img/Catalogo/patatas.png">
-                        <div><p>Otros</p></div>
+            </div>
+            <div class="row">
+                <div class="Col-4">
+                    <div id="item">
+                        <img src="../Assets/img/Cervesas/modelo%20(2).png">
+                        <p style="color:white">Modelo</p>
                     </div>
                 </div>
             </div>
