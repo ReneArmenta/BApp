@@ -4,6 +4,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  overflow-x: hidden;
 
 
 }
@@ -21,8 +22,8 @@
     margin-top: 1px;
     margin-right: -31px;
     margin-left: 0px;
-    background-color: rgba(0,0,0,0.5);
-     font-weight: 600;
+    background-color: rgba(0,0,0,0.6);
+    font-weight: 600;
 }
 #Busqueda::placeholder{
     color: white;
@@ -30,7 +31,6 @@
 }
 #Btn_buscar label{
     cursor: pointer;
-    
 }
 
 #view-catalogo button{
@@ -52,7 +52,7 @@
     margin-bottom: 30px;
     text-align: center;
     padding: 15px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.6);
     cursor: pointer;
 }
 .item img{
@@ -86,8 +86,32 @@ margin-bottom: 0px;
     width: 100%;
     bottom: 0px;
     border-top: 2px solid white;
-    background-color: rgba(0,0,0,0.5)
+    background-color: rgba(0,0,0,0.6)
 }
+
+#item_cat{
+    animation-duration: .2s;
+}
+
+#item{
+    border: 1px solid white;
+    height: 105px;
+    background-color: rgba(0,0,0,0.6);
+    padding: 10px;
+    margin-bottom: 30
+}
+#cat_marcas{
+    padding: 15px;
+    text-align: center;
+    margin-top: 23px;
+    display: none;
+    animation-duration: .2s;
+}
+#culo{
+    display: none;
+    padding: 25px;
+    background-color: rgba(0,0,0,0.6)
+
 #cabeza{
     padding: 9px;
 }
