@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-        <div id="item_cat">
+        <div id="item_cat" class="container">
             <div class="row">
                 <div class="col-6">
                     <div class="item">

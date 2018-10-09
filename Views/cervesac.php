@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="Col-4">
                     <div id="item">
-                        <img src="../Assets/img/Cervesas/lata.png">
+                        <img src="../Assets/img/Cervesas/tecate.png">
                         <p style="color:white">Tecate</p>
                         </div>
                     </div>
