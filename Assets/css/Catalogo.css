@@ -93,13 +93,23 @@ margin-bottom: 0px;
     animation-duration: .2s;
 }
 
-#item{
+.itemmarcas{
     border: 1px solid white;
     height: 105px;
     background-color: rgba(0,0,0,0.6);
     padding: 10px;
-    margin-bottom: 30
+    margin-bottom: 30px;
+    cursor: pointer;
 }
+.producto{
+    border: 1px solid white;
+    height: 105px;
+    background-color: rgba(0,0,0,0.6);
+    padding: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
 #cat_marcas{
     padding: 15px;
     text-align: center;
@@ -107,14 +117,15 @@ margin-bottom: 0px;
     display: none;
     animation-duration: .2s;
 }
-#culo{
+#cat_productos{
+    padding: 15px;
+    text-align: center;
+    margin-top: 23px;
     display: none;
-    padding: 25px;
-    background-color: rgba(0,0,0,0.6)
+    animation-duration: .2s;
 
-#cabeza{
-    padding: 9px;
 }
+
 @media(min-width:720px){
     .item{
         height: 250px;
