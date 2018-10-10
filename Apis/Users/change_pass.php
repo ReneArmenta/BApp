@@ -15,11 +15,19 @@ if (!$query) {
         $numero = $r['Numero'];
         
     }
-    
-if($numero != $num){
-    echo "0";
-}else{
-    echo "1";
-}    
+        
+    if($numero != $num){
+        echo "0";
+    }else{
+        $sql = mysqli_query($conx, "insert into tbl_solicitudes (telefono,tipo_solicitud) VALUES ('$num','0')");
+        
+        
+         if(mysqli_query($conx, $sql)){
+                echo "1";
+            }else{
+                echo "Error:" . $conx->error;
+            } 
+    }   
+}
 
 ?>
