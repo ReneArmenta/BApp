@@ -32,6 +32,7 @@
             </div>
         </div>
         
+        <!--catalogo-->
         <div id="item_cat" class="container">
             <div class="row">
                 <div class="col-6">
@@ -65,19 +66,19 @@
         <div id="cat_marcas">
             <div class="row">
                 <div class="Col-4">
-                    <div id="item">
+                    <div id="btn_tecate" class="itemmarcas">
                         <img src="../Assets/img/Cervesas/tecate.png">
                         <p style="color:white">Tecate</p>
-                        </div>
                     </div>
+                </div>
                 <div class="Col-4">
-                    <div id="item">
+                    <div id="btn_budlight" class="itemmarcas">
                         <img src="../Assets/img/Cervesas/Bud.png">
                         <p style="color:white">bud light</p>
                     </div>
                 </div>
                 <div class="Col-4">
-                    <div id="item">
+                    <div id="btn_heineken" class="itemmarcas">
                         <img src="../Assets/img/Cervesas/vino.png">
                         <p style="color:white">Heineken</p>
                     </div>
@@ -85,9 +86,33 @@
             </div>
             <div class="row">
                 <div class="Col-4">
-                    <div id="item">
+                    <div id="btn_modelo" class="itemmarcas">
                         <img src="../Assets/img/Cervesas/modelo%20(2).png">
                         <p style="color:white">Modelo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--tipodeproducto-->
+        <div id="cat_productos">
+            <div class="row">
+                <div class="Col-4">
+                    <div id="item_producto" class="producto">
+                        <img src="../Assets/img/Cervesas/tecate.png">
+                        <p style="color:white">10 botes</p>
+                    </div>
+                </div>
+                <div class="Col-4">
+                    <div id="item_producto" class="producto">
+                        <img src="../Assets/img/Cervesas/Bud.png">
+                        <p style="color:white">12 botes</p>
+                    </div>
+                </div>
+                <div class="Col-4">
+                    <div id="item_producto" class="producto">
+                        <img src="../Assets/img/Cervesas/vino.png">
+                        <p style="color:white">caguama</p>
                     </div>
                 </div>
             </div>
@@ -108,6 +133,24 @@
         </footer>
         <script src="../Assets/js/login/main-login.js"></script>
         <script>
+            
+            var posicion = 0;
+            
+            $(".item, .itemmarcas").on("click", function(){
+                    posicion++;
+                    alert(posicion);
+                });
+            $("#btn_return").on("click", function(){
+                   if(posicion > 0){
+                        posicion--;
+                        alert(posicion);
+                     
+                   }
+                   
+                    
+                });
+            
+            
             $("#btn_cerveza").on("click", function(){
                     $('#item_cat').animateCss('slideOutleft', function() {
                         $('#item_cat').css("display","none");
@@ -117,12 +160,41 @@
                 });
             });
             $("#btn_return").on("click", function(){
-                    $('#cat_marcas').animateCss('slideOutRight', function() {
-                    $('#cat_marcas').css("display","none");
+                $('#cat_marcas').animateCss('slideOutRight', function() {
+                        $('#cat_marcas').css("display","none");
                         $('#item_cat').css("display","block");
                         $('#item_cat').animateCss('slideInLeft');
                 });
             });
+            $("#btn_tecate").on("click", function(){
+                    $('#cat_marcas').animateCss('slideOutleft', function() {
+                        $('#cat_marcas').css("display","none");
+                        $('#cat_productos').css("display","block");
+                        $('#cat_productos').animateCss('slideInRight');
+                });
+            });
+            $("#btn_budlight").on("click", function(){
+                    $('#cat_marcas').animateCss('slideOutleft', function() {
+                        $('#cat_marcas').css("display","none");
+                        $('#cat_productos').css("display","block");
+                        $('#cat_productos').animateCss('slideInRight');
+                });
+            });
+            $("#btn_heineken").on("click", function(){
+                    $('#cat_marcas').animateCss('slideOutleft', function() {
+                        $('#cat_marcas').css("display","none");
+                        $('#cat_productos').css("display","block");
+                        $('#cat_productos').animateCss('slideInRight');
+                });
+            });
+            $("#btn_modelo").on("click", function(){
+                    $('#cat_marcas').animateCss('slideOutleft', function() {
+                        $('#cat_marcas').css("display","none");
+                        $('#cat_productos').css("display","block");
+                        $('#cat_productos').animateCss('slideInRight');
+                });
+            });
+            
             
         </script>
     </body>
