@@ -121,13 +121,21 @@
 
                                     });
                                }else{
-                                   
-                                   swal({
-                                      type: 'success',
-                                      title: d,
-                                      showConfirmButton: true,
-                                    });
-                                   
+                                   if(d == 1){
+                                       swal({
+                                          type: 'success',
+                                          title: "Pronto te mandaremos un mensaje con tu nueva contraseña.",
+                                          showConfirmButton: true,
+                                        });
+                                   }else{
+                                       if(d == 2){
+                                           swal({
+                                          type: 'error',
+                                          title: "Ha ocurrido un error inesperado.",
+                                          showConfirmButton: true,
+                                        });
+                                       }
+                                   } 
                                }
                            },
                        });
