@@ -3,6 +3,7 @@ header("Access-Control-Allow-Origin: *");
 include('../conexion.php');
 $num = htmlspecialchars($_POST["num"]);
 $numero = 0;
+$type = 0;
 
 $query = mysqli_query($conx, "select Numero from tbl_usuarios where Numero = '$num'");
 if (!$query) {
@@ -19,14 +20,17 @@ if (!$query) {
     if($numero != $num){
         echo "0";
     }else{
-        $sql = mysqli_query($conx, "insert into tbl_solicitudes (telefono,tipo_solicitud) VALUES ('$num','0')");
         
-        
-         if(mysqli_query($conx, $sql)){
+        $stmt = mysqli_prepare($conx, "INSERT INTO tbl_solicitudes(telefono,tipo_solicitud)VALUES(?,?)");
+        mysqli_stmt_bind_param($stmt, 'ss', $num, $type);
+        mysqli_stmt_execute($stmt);
+
+         if(mysqli_stmt_execute($stmt)){
                 echo "1";
             }else{
-                echo "Error:" . $conx->error;
-            } 
+                echo "2";
+            }
+         
     }   
 }
 

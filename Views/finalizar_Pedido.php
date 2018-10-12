@@ -15,16 +15,9 @@
     </head>
     <body id="body_Pedido">
          <div class="container-fluid bg-primary" id="containerNav">
-        
-           <div class="col">
+           <div class="col-12">
              <button class="btn btn-back navbar-btn"  id="btnBack"><i class="fa fa-chevron-left"></i></button>
-     
-             
-      
             </div>
-         
-        
-      
         </div>
     <div id="div_ticket">
 

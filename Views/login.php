@@ -3,7 +3,7 @@
         <title>BeerApp - login</title>
        
         <link rel="stylesheet" href="../Assets/css/estilos.css">
-        
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="
         stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -47,101 +47,48 @@
                         </tr>
                         <tr>
                             <td><input type="checkbox" class="checkbox check_tc"></td>
-                            <td><p class="new-account-text check_text">He leido los <a href="#">terminos y condiciones</a></p></td>
+                            <td><p class="new-account-text check_text">He leido los <a href="#" data-toggle="modal" data-target="#tc">terminos y condiciones</a></p></td>
                         </tr>
                     </table>
                     <button id="btn-add-usr">CREAR CUENTA</button>
                     <button id="btn-cancel">CANCELAR</button>
                 </div>
             </div>
+            
+            
+            <!-- Terminos y condiciones -->
+            <div class="modal fade" id="tc">
+              <div class="modal-dialog">
+                <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title" style="text-align: center;">TERMINOS Y CONDICIONES</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <br><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <br><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                  </div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
         </div>
     </body>
     <script src="../Assets/js/login/main-login.js"></script>
     <script src="../Assets/js/login/register.js"></script>
     <script src="../Assets/js/login/login.js"></script>
-    <script>
-        //Terminar el mensaje y la llamada ajax para poder cambiar la contraseña
-        $("#forgot-pass").on("click",function(){
-            const {value: name} =  swal({
-          title: '¿Olvidaste tu contraseña?',
-          text: 'Escribe tu numero de teléfono y uno de nuestros tecnicos te mandará un mensaje con la nueva contraseña.',
-          input: 'text',
-          inputPlaceholder: 'Numero de telefono',    
-          inputAttributes: {
-            maxlength: 13
-          },
-          showCancelButton: true,
-          cancelButtonText: "Cancelar",
-          confirmButtonText: "Enviar",
-          confirmButtonColor: '#FFA500',             
-          inputValidator: (value) => {
-              
-            var alphanumers = /^[Z0-9\-\s]+$/;
-            if(!alphanumers.test(value)){
-                return 'Hay caracteres no permitidos en el campo';
-
-            }
-            if(value.length > 13){
-                return 'Limite de caracteres exedido';
-            }else{
-                if(value.length < 10){
-                    return 'Escribe un numero de teléfono valido';
-                }
-            }
-            return !value && 'Escribe algo en el campo.';
-            
-          }
-        }).then((result) => {
-                    if(result.value){
-                        change_pass(result.value);
-                    }
-                    
-                });
-            
-        });
-        
-        function change_pass(number){
-            var data = {
-                        num: number
-                    }
-                    var url = 'http://localhost:8080/BApp/Apis/Users/change_pass.php';
-                       $.ajax({
-                           url: url,
-                           type: 'POST',
-                           dataType: 'text',
-                           data: data,
-                           success: function(d){
-                               //manejo de mensajes regresados por ajax.
-                               if(d == 0){
-                                   swal({
-                                      type: 'error',
-                                      title: "Este número no se encuentra registrado",
-                                      text: "Por favor escriba un numero valido.",
-                                      showConfirmButton: true,
-
-                                    });
-                               }else{
-                                   if(d == 1){
-                                       swal({
-                                          type: 'success',
-                                          title: "Pronto te mandaremos un mensaje con tu nueva contraseña.",
-                                          showConfirmButton: true,
-                                        });
-                                   }else{
-                                       if(d == 2){
-                                           swal({
-                                          type: 'error',
-                                          title: "Ha ocurrido un error inesperado.",
-                                          showConfirmButton: true,
-                                        });
-                                       }
-                                   } 
-                               }
-                           },
-                       });
-            
-            
-        }
-        
-    </script>
+    <script src="../Assets/js/login/change_pass.js"></script>
 </html>
