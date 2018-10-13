@@ -1,4 +1,12 @@
-<html>
+<?php 
+    session_start();
+
+    if($_SESSION['id'] != 0){
+        if($_SESSION['rol'] == 1){
+?>
+   
+
+   <html>
     <head>
         <title>BeerApp - Admin</title>
        
@@ -18,3 +26,16 @@
         
     </body>
 </html>
+<?php 
+            
+}else{
+            header("Location: /Views/login.php");
+            die();
+        }
+    }
+    else{
+        header("Location: /Views/login.php");
+        die();
+    }
+
+?>

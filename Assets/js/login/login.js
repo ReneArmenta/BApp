@@ -23,7 +23,6 @@
 
                                     });
                                }else{
-                                   
                                   window.location.replace("http://localhost:8080/BApp/Views/catalogo.php");
                                  
                                    

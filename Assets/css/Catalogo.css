@@ -35,13 +35,16 @@
 
 #view-catalogo button{
     background-color: transparent;
-    border-left: none !important;
-    border-right: none !important;
+    
     margin-top: 0px;
     border-bottom: none;
     border-top: none;
     border-radius: 20px;
     text-align: center;
+}
+#Btn_buscar, #btn_return{
+    border-left: none !important;
+    border-right: none !important;
 }
 .item{
     border: 1px solid white;
@@ -61,11 +64,29 @@ margin-bottom: 0px;
 }
 #Finalizar{
     text-align: center;
-    padding-top: 11px;
+    padding-top: 6px;
     color:white;
+    cursor: pointer;
+    height: 40px;
+    font-weight: 600;
+    border: 1px solid white !important; 
+    border: 1px solid white !important; 
+    border-radius: 0px !important;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+#Finalizar:hover{
+    background-color: rgba(34,139,34,0.7);
 }
 #btn_return{
+    cursor: pointer;
     margin-top: 6px !important;
+}
+#btn_return label{
+    cursor: pointer;
 }
 .item p{
     margin-bottom: 0px;
@@ -73,20 +94,20 @@ margin-bottom: 0px;
     color: White;
 }
 #Total{
-    margin-left: 15px;
+    margin-left: 0px;
     margin-bottom: 0px;
 }
 #precio_total{
-    margin-left: 15px;
+    margin-left: 0px;
 }
 #todo_ese_pedo{
-    padding: 15px;
+    padding: 10px;
     text-align: right;
     position: absolute;
     width: 100%;
     bottom: 0px;
     border-top: 2px solid white;
-    background-color: rgba(0,0,0,0.6)
+    background-color: rgba(0,0,0,0.6);
 }
 
 #item_cat{
@@ -125,7 +146,7 @@ margin-bottom: 0px;
 
     animation-duration: .2s;
     padding: 25px;
-    background-color: rgba(0,0,0,0.6)
+    background-color: rgba(0,0,0,0.6);
 }
 #cabeza{
     padding: 9px;
