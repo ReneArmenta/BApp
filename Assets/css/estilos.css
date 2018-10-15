@@ -6,12 +6,19 @@
 
 body{
     background: url(../img/Login/login-wallpaper2.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
+    /*desabilitar el seleccionado de los textos*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .border{
     width: 100%;

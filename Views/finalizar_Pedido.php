@@ -143,7 +143,7 @@
                 {
                 nombre_articulo:"Doritos",
                 cantidad:"3",
-                precio:"20"
+                precio:"100"
             },
                
             ]

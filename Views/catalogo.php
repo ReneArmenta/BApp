@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if($_SESSION['id'] != 0){
+    if($_SESSION['id'] == 0){
 ?>
 <html>
 
@@ -118,24 +118,98 @@
     <div id="cat_productos">
         <div class="row">
             <div class="Col-4">
-                <div id="item_producto" class="producto">
-                    <img src="../Assets/img/Cervesas/tecate.png">
+                <div class="item_producto" item_name="10 botes" item_quantity="0" item_price="160">
+                   <div class="producto">
+                       <img src="../Assets/img/Cervesas/tecate.png">
                     <p style="color:white">10 botes</p>
+                   </div>
+                   <p class="item_price">$160</p>
+                    <div class="btn_quantity d-flex justify-content-center">
+                        <label class="fa fa-minus-circle btn_menos"></label>
+                        <p class="num_quantity">0</p>
+                        <label class="fa fa-plus-circle btn_mas"></label>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="Col-4">
+                <div class="item_producto" item_name="12 botes" item_quantity="0" item_price="150">
+                   <div class="producto">
+                        <img src="../Assets/img/Cervesas/Bud.png">
+                        <p style="color:white">12 botes</p>
+                    </div>
+                    <p class="item_price">$150</p>
+                    <div class="btn_quantity d-flex justify-content-center">
+                        <label class="fa fa-minus-circle btn_menos"></label>
+                        <p class="num_quantity">0</p>
+                        <label class="fa fa-plus-circle btn_mas"></label>
+                    </div>
                 </div>
             </div>
             <div class="Col-4">
-                <div id="item_producto" class="producto">
-                    <img src="../Assets/img/Cervesas/Bud.png">
-                    <p style="color:white">12 botes</p>
+                <div class="item_producto" item_name="caguama" item_quantity="0" item_price="50">
+                   <div class="producto">
+                        <img src="../Assets/img/Cervesas/vino.png">
+                        <p style="color:white">caguama</p>
+                    </div>
+                    <p class="item_price">$50</p>
+                    <div class="btn_quantity d-flex justify-content-center">
+                        <label class="fa fa-minus-circle btn_menos"></label>
+                        <p class="num_quantity">0</p>
+                        <label class="fa fa-plus-circle btn_mas"></label>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="Col-4">
+                <div class="item_producto" item_name="10 botes" item_quantity="0" item_price="100">
+                   <div class="producto">
+                       <img src="../Assets/img/Cervesas/tecate.png">
+                    <p style="color:white">10 botes</p>
+                   </div>
+                   <p class="item_price">$100</p>
+                    <div class="btn_quantity d-flex justify-content-center">
+                        <label class="fa fa-minus-circle btn_menos"></label>
+                        <p class="num_quantity">0</p>
+                        <label class="fa fa-plus-circle btn_mas"></label>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="Col-4">
+                <div class="item_producto" item_name="12 botes" item_quantity="0" item_price="60">
+                   <div class="producto">
+                        <img src="../Assets/img/Cervesas/Bud.png">
+                        <p style="color:white">12 botes</p>
+                    </div>
+                    <p class="item_price">$60</p>
+                    <div class="btn_quantity d-flex justify-content-center">
+                        <label class="fa fa-minus-circle btn_menos"></label>
+                        <p class="num_quantity">0</p>
+                        <label class="fa fa-plus-circle btn_mas"></label>
+                    </div>
                 </div>
             </div>
             <div class="Col-4">
-                <div id="item_producto" class="producto">
-                    <img src="../Assets/img/Cervesas/vino.png">
-                    <p style="color:white">caguama</p>
+                <div class="item_producto" item_name="caguamas" item_quantity="0" item_price="31">
+                   <div class="producto">
+                        <img src="../Assets/img/Cervesas/vino.png">
+                        <p style="color:white">caguama</p>
+                    </div>
+                    <p class="item_price">$31</p>
+                    <div class="btn_quantity d-flex justify-content-center">
+                        <label class="fa fa-minus-circle btn_menos"></label>
+                        <p class="num_quantity">0</p>
+                        <label class="fa fa-plus-circle btn_mas"></label>
+                        
+                    </div>
                 </div>
             </div>
         </div>
+        
     </div>
 
 
@@ -246,6 +320,38 @@
                 $('#cat_productos').css("display", "block");
                 $('#cat_productos').animateCss('slideInRight');
             });
+        });
+    </script>
+    
+    <script>
+        //Script para el contador de los articulos al presionar el botón más
+        $(".item_producto").find(".btn_mas").click(function(){
+            var i = $(this).closest(".item_producto").find(".num_quantity").text();
+            i++;
+             $(this).closest(".item_producto").find(".num_quantity").text(i);
+            
+            $(this).closest(".item_producto").attr("item_quantity", i);
+        });
+        //Script para el contador de los articulos al presionar el botón menos
+        $(".item_producto").find(".btn_menos").click(function(){
+            var i = $(this).closest(".item_producto").find(".num_quantity").text();
+            if(i > 0){
+               i--; 
+            }
+            $(this).closest(".item_producto").find(".num_quantity").text(i);
+        });
+    
+        
+        $("#btn_return").click(function(){
+             //Terminar el script para poder leer que productos tiene más de 0 en la cantidad y guardarlos en un arreglo para luego ser insertados en el objeto "pedido"
+            var count = $("#cat_productos .item_producto").length;
+            alert(count);
+           
+            for(var i = 0; i < count; i++){
+                
+                alert(i);
+            }
+            
         });
     </script>
 
