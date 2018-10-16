@@ -21,13 +21,15 @@
     //Accion para el boton de crear cuenta
     $("#btn-add-usr").on("click", function(){
          //metodo ajax para mandar los datos del formulario a la base de datos.
-       
         var alphanumers = /^[Z0-9]+$/;
         var valid = /^[a-zA-Z0-9\-\s]+$/;
             check_Empty()
                 if(check_Empty() == true){
                      if(valid.test($("#nom").val()) && $("#nom").val().length >= 3){
                         if($("#pass").val().length >= 8){
+                            if($("#pass").val() == $("#confirm-pass").val()){
+           
+       
                                     if(alphanumers.test($("#num").val()) && $("#num").val().length >= 10){
                                           var data = {
                                             nom: $("#nom").val(),
@@ -76,6 +78,13 @@
                                       showConfirmButton: true,
                                     });
                               }
+                            }else{
+                                swal({
+                              type: 'error',
+                              title: "La contraseñas deben coincidir.",
+                              showConfirmButton: true,
+                            });
+                            }
                         }else{
                             swal({
                               type: 'error',
@@ -91,6 +100,7 @@
                         });
                     
                 }
+        
             }else{
                 swal({
                       type: 'error',
@@ -98,6 +108,7 @@
                       showConfirmButton: true,
                     });
             }
+        
     });
         //Agregar la validacion de que los checkbox estan chekeados
     function check_Empty() {

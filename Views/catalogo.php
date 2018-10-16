@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if($_SESSION['id'] == 0){
+    if($_SESSION['id'] != 0){
 ?>
 <html>
 
@@ -339,20 +339,39 @@
                i--; 
             }
             $(this).closest(".item_producto").find(".num_quantity").text(i);
+            $(this).closest(".item_producto").attr("item_quantity", i);
         });
     
         
         $("#btn_return").click(function(){
-             //Terminar el script para poder leer que productos tiene más de 0 en la cantidad y guardarlos en un arreglo para luego ser insertados en el objeto "pedido"
-            var count = $("#cat_productos .item_producto").length;
-            alert(count);
-           
-            for(var i = 0; i < count; i++){
-                
-                alert(i);
-            }
-            
+            save_items();
         });
+        
+        
+        function save_items(){
+            //Script para añadir los articulos al pedido.
+            $('#cat_productos .item_producto').each(function(i, productos){
+                if($(productos).attr("item_quantity") > 0 ){
+                    if(pedidos.articulo.length > 0 ){
+                        for(var i = 0; i < pedidos.articulo.length; i++){
+                            if(pedidos.articulo[i].nombre_articulo == $(productos).attr("item_name")){
+                                pedidos.articulo.splice(i,1);
+                                
+                            }
+                        }
+                    }
+                        pedidos.articulo.push({
+                                    "nombre_articulo": $(productos).attr("item_name"),
+                                    "cantidad": $(productos).attr("item_quantity"),
+                                    "precio": $(productos).attr("item_price")
+                                });
+                    
+                    
+                    
+                }
+            });
+            console.log(pedidos.articulo);
+        }
     </script>
 
 
