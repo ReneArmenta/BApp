@@ -148,10 +148,10 @@
                 </div>
             </div>
             <div class="Col-4">
-                <div class="item_producto" item_name="caguama" item_quantity="0" item_price="50">
+                <div class="item_producto" item_name="caguama indio" item_quantity="0" item_price="50">
                    <div class="producto">
                         <img src="../Assets/img/Cervesas/vino.png">
-                        <p style="color:white">caguama</p>
+                        <p style="color:white">caguama indio</p>
                     </div>
                     <p class="item_price">$50</p>
                     <div class="btn_quantity d-flex justify-content-center">
@@ -164,10 +164,10 @@
             </div>
             
             <div class="Col-4">
-                <div class="item_producto" item_name="10 botes" item_quantity="0" item_price="100">
+                <div class="item_producto" item_name="6 botes" item_quantity="0" item_price="100">
                    <div class="producto">
                        <img src="../Assets/img/Cervesas/tecate.png">
-                    <p style="color:white">10 botes</p>
+                    <p style="color:white">6 botes</p>
                    </div>
                    <p class="item_price">$100</p>
                     <div class="btn_quantity d-flex justify-content-center">
@@ -180,10 +180,10 @@
                 
             </div>
             <div class="Col-4">
-                <div class="item_producto" item_name="12 botes" item_quantity="0" item_price="60">
+                <div class="item_producto" item_name="24 botes" item_quantity="0" item_price="60">
                    <div class="producto">
                         <img src="../Assets/img/Cervesas/Bud.png">
-                        <p style="color:white">12 botes</p>
+                        <p style="color:white">24 botes</p>
                     </div>
                     <p class="item_price">$60</p>
                     <div class="btn_quantity d-flex justify-content-center">
@@ -194,10 +194,10 @@
                 </div>
             </div>
             <div class="Col-4">
-                <div class="item_producto" item_name="caguamas" item_quantity="0" item_price="31">
+                <div class="item_producto" item_name="caguama tecate" item_quantity="0" item_price="31">
                    <div class="producto">
                         <img src="../Assets/img/Cervesas/vino.png">
-                        <p style="color:white">caguama</p>
+                        <p style="color:white">caguama tecate</p>
                     </div>
                     <p class="item_price">$31</p>
                     <div class="btn_quantity d-flex justify-content-center">
@@ -343,15 +343,21 @@
         });
     
         
-        $("#btn_return").click(function(){
-            save_items();
-        });
+      
         
         
-        function save_items(){
+       function save_items(){
             //Script para añadir los articulos al pedido.
-            $('#cat_productos .item_producto').each(function(i, productos){
+           
+           
+           
+           var i = 0;
+            pedidos.articulo.splice(i,pedidos.articulo.length);
+           if(posicion == 2){
+               $('#cat_productos .item_producto').each(function(i, productos){
+                
                 if($(productos).attr("item_quantity") > 0 ){
+                    
                     if(pedidos.articulo.length > 0 ){
                         for(var i = 0; i < pedidos.articulo.length; i++){
                             if(pedidos.articulo[i].nombre_articulo == $(productos).attr("item_name")){
@@ -370,8 +376,29 @@
                     
                 }
             });
-            console.log(pedidos.articulo);
-        }
+             console.log(pedidos.total_pedido);
+           }
+           if(posicion == 2 ){
+               for(var i = 0; i < pedidos.total_pedido.length; i++){
+                       if(pedidos.articulo.find(pedidos.total_pedido[i].nombre_articulo)){
+                                pedidos.articulo.splice(i,1);
+                                
+                            }
+               }
+                   
+                   pedidos.total_pedido.push({
+                                    "nombre_articulo": pedidos.articulo[i].nombre_articulo,
+                                    "cantidad":  pedidos.articulo[i].cantidad,
+                                    "precio":  pedidos.articulo[i].precio
+                                });
+                   
+               }
+               
+              
+           }
+          
+            
+        
     </script>
 
 
@@ -380,7 +407,7 @@
 </html>
 <?php 
 }else{
-            header("Location: /Views/login.php");
+            header("Location: login.php");
             die();
         }
 

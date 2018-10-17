@@ -2,15 +2,16 @@ var posicion = 0;
 
         $(".item, .itemmarcas").on("click", function() {
             posicion++;
-           
+           console.log("posicion: " +  posicion );
         });
         
 
         
         $("#btn_return").on("click", function() {
+             save_items();
             if (posicion > 0) {
                 posicion--;
-                
+                console.log("posicion: " +  posicion );
                 switch (posicion){
                     case 0:
                         $('#cat_marcas').animateCss('slideOutRight', function() {
