@@ -398,13 +398,14 @@
                           
                       });
                    }*/
+            }
                }else{
                 add_items();
             }
                
                
                // $.each(pedidos.articulo, function(i, item){
-                    
+        }
         //    });
             }
             
