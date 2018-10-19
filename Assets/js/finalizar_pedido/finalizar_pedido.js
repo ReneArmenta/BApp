@@ -2,7 +2,6 @@
         
         
         pedidos = {
-            "total_pedido":[],
             "articulo":[]
         }
         

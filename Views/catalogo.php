@@ -344,61 +344,94 @@
     
         
       
-        
-        
-       function save_items(){
-            //Script para añadir los articulos al pedido.
-           
-           
-           
-           var i = 0;
-            pedidos.articulo.splice(i,pedidos.articulo.length);
-           if(posicion == 2){
-               $('#cat_productos .item_producto').each(function(i, productos){
-                
-                if($(productos).attr("item_quantity") > 0 ){
-                    
-                    if(pedidos.articulo.length > 0 ){
-                        for(var i = 0; i < pedidos.articulo.length; i++){
-                            if(pedidos.articulo[i].nombre_articulo == $(productos).attr("item_name")){
-                                pedidos.articulo.splice(i,1);
-                                
+        function save_items(){
+            if(posicion == 2 ){
+                $('#cat_productos .item_producto').each(function(j, productos){
+                    if($(productos).attr("item_quantity") != 0)  {
+                        for (var i = 0; i<pedidos.articulo.length;i++)
+                            {
+                                if(pedidos.articulo[i].nombre_articulo == $(productos).attr("item_name")){}
                             }
-                        }
+                        
                     }
-                        pedidos.articulo.push({
+                });
+                //Script para añadir los articulos al pedido.
+           /*if (pedidos.articulo.length > 0){
+               var l = pedidos.articulo.length;
+               $('#cat_productos .item_producto').each(function(j, productos){
+               for(var i = 0; i < l;i++){
+                   
+                      if(pedidos.articulo[i].nombre_articulo == $(productos).attr("item_name")){
+                          if($(productos).attr("item_quantity") != 0){
+                
+                              pedidos.articulo[i].cantidad = $(productos).attr("item_quantity");
+                                
+                              return false;
+                                
+                        
+                          }else{
+                               
+                              
+                              pedidos.articulo[i].splice(i,1);
+                               return false;
+                          }
+
+                      }else{
+                          
+                          if($(productos).attr("item_quantity") != 0 ){
+                                pedidos.articulo.push({
                                     "nombre_articulo": $(productos).attr("item_name"),
                                     "cantidad": $(productos).attr("item_quantity"),
                                     "precio": $(productos).attr("item_price")
                                 });
-                    
-                    
-                    
-                }
-            });
-             console.log(pedidos.total_pedido);
-           }
-           if(posicion == 2 ){
-               for(var i = 0; i < pedidos.total_pedido.length; i++){
-                       if(pedidos.articulo.find(pedidos.total_pedido[i].nombre_articulo)){
-                                pedidos.articulo.splice(i,1);
-                                
-                            }
-               }
-                   
-                   pedidos.total_pedido.push({
-                                    "nombre_articulo": pedidos.articulo[i].nombre_articulo,
-                                    "cantidad":  pedidos.articulo[i].cantidad,
-                                    "precio":  pedidos.articulo[i].precio
+                              
+                          /*$.each(pedidos.articulo, function(k, item){
+                              if($(productos).attr("item_name") == item.nombre_articulo ){
+                                      pedidos.articulo.push({
+                                    "nombre_articulo": $(productos).attr("item_name"),
+                                    "cantidad": $(productos).attr("item_quantity"),
+                                    "precio": $(productos).attr("item_price")
                                 });
-                   
-               }
+                                }
+                          }
+                      }
+                          
+                      });
+                   }*/
+               }else{
+                add_items();
+            }
                
-              
-           }
-          
+               
+               // $.each(pedidos.articulo, function(i, item){
+                    
+        //    });
+            }
+            
+                console.log(pedidos.articulo);
+            }
+            
+                       
+                    
+                        
+                            
+                       
+                    
+            
             
         
+        function add_items(){
+            $('#cat_productos .item_producto').each(function(i, productos){
+                if($(productos).attr("item_quantity") != 0){
+                            pedidos.articulo.push({
+                                "nombre_articulo": $(productos).attr("item_name"),
+                                "cantidad": $(productos).attr("item_quantity"),
+                                "precio": $(productos).attr("item_price")
+                            });
+                            }
+                });
+        }
+      
     </script>
 
 
