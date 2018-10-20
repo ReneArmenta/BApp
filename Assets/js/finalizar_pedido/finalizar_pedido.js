@@ -1,29 +1,22 @@
-
-        
-        
-        pedidos = {
-            "articulo":[]
-        }
-        
-        
-        
-        $("#Finalizar").click(function(){
-            $("#ticket_content, #Totals").empty();
-            var total=0;
-            var stotal=0;
-            var costoEnvio=30;
-            
-            save_items();
-            
-            for(var i = 0; i < pedidos.articulo.length; i++){
-            $("#ticket_content").append("<div class='row'><div class='col-6'><h5 class='nom-art'>" + pedidos.articulo[i].nombre_articulo + "</h5></div><div class='col-2'><h5 class='cant-art'>" + pedidos.articulo[i].cantidad +"</h5></div><div class='col-1'><h5 class='precio-art'>"+" $"+ pedidos.articulo[i].precio +"</h5></div>  </div>")
-            stotal=stotal+pedidos.total_pedido[i].cantidad * pedidos.articulo[i].precio;  
-            
-            }
-            total= stotal+costoEnvio;
-
-            $("#s_totals").append("<div class='row'><h5 class='nom-art'>" +"$" +stotal + "</h5></div>");
-            $("#costo_envio").text("$" + costoEnvio + ".00");
-            $("#Totals").append("<p class='nom-art'>" +"$" +total + "</p>");
-        });
-        
+pedidos = {
+    "articulo": []
+}
+$("#Finalizar").click(function () {
+    //Borrar la lista del ticket 
+    $("#ticket_content, #Totals").empty();
+    //manda a llamar la funcion para agregar los articulos al arreglo
+    save_items();
+    var total = 0;
+    var costoEnvio = 30;
+    //Toma los articulos del arreglo y los imprime en html para desplegarlos en una lista
+    $(pedidos.articulo).each(function (i, productos) {
+        $("#ticket_content").append("<div class='row'><div class='col-6'><h5 class='nom-art'>" + productos.nombre_articulo + "</h5></div><div class='col-2'><h5 class='cant-art'>" + productos.cantidad + "</h5></div><div class='col-1'><h5 class='precio-art'>" + " $" + productos.precio + "</h5></div>  </div>");
+        //Suma el valor de la variable total mas la cantidad de el producto actual por el precio.
+        total += productos.cantidad * productos.precio;
+    });
+    //Suma el total del pedido mas el envio.
+    total += costoEnvio;
+    //Imprime los totales
+    $("#costo_envio").text("$" + costoEnvio + ".00");
+    $("#Totals").append("<p class='nom-art'>" + "$" + total + "</p>");
+});

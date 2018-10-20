@@ -1,6 +1,6 @@
 var posicion = 0;
 
-        $(".item, .itemmarcas").on("click", function() {
+        $(".item").on("click", function() {
             posicion++;
            console.log("posicion: " +  posicion );
         });

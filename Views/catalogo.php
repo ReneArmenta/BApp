@@ -8,7 +8,7 @@
     <title>BeerApp - Catalogo</title>
 
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
-    
+
     <link rel="stylesheet" href="../Assets/css/estilos.css">
     <link rel="stylesheet" href="../Assets/css/lib/animate.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    
-    
-    
+
+
+
 </head>
 
 <body id="catalogo">
@@ -43,13 +43,12 @@
             </div>
         </div>
     </div>
-
     <!--catalogo-->
     <div id="item_cat" class="container">
         <div class="row">
             <div class="col-6">
                 <div id="btn_cerveza" class="item">
-                    <img src="../Assets/img/Catalogo/cerveza.png">
+                    <img src="../Assets/img/Categorias/cerveza.png">
                     <div>
                         <p>Cerveza</p>
                     </div>
@@ -57,7 +56,7 @@
             </div>
             <div class=" col-6">
                 <div class="item">
-                    <img src="../Assets/img/Catalogo/coctel%20(3).png">
+                    <img src="../Assets/img/Categorias/coctel.png">
                     <div>
                         <p>Coolers</p>
                     </div>
@@ -65,7 +64,7 @@
             </div>
             <div class=" col-6">
                 <div class="item">
-                    <img src="../Assets/img/Catalogo/cigarrillo%20(1).png">
+                    <img src="../Assets/img/Categorias/cigarrillo.png">
                     <div>
                         <p>Cigarros</p>
                     </div>
@@ -73,7 +72,7 @@
             </div>
             <div class="col-6">
                 <div class="item">
-                    <img src="../Assets/img/Catalogo/patatas.png">
+                    <img src="../Assets/img/Categorias/patatas.png">
                     <div>
                         <p>Otros</p>
                     </div>
@@ -81,62 +80,57 @@
             </div>
         </div>
     </div>
-
     <!--Marcas-->
-    <div id="cat_marcas">
+    <div id="cat_marcas" class="container">
         <div class="row">
-            <div class="Col-4">
-                <div id="btn_tecate" class="itemmarcas">
-                    <img src="../Assets/img/Cervesas/tecate.png">
+            <div class="Col-6">
+                <div id="btn_tecate" class="item">
+                    <img src="../Assets/img/Productos/tecate.png">
                     <p style="color:white">Tecate</p>
                 </div>
             </div>
-            <div class="Col-4">
-                <div id="btn_budlight" class="itemmarcas">
-                    <img src="../Assets/img/Cervesas/Bud.png">
+            <div class="Col-6">
+                <div id="btn_budlight" class="item">
+                    <img src="../Assets/img/Productos/Bud.png">
                     <p style="color:white">bud light</p>
                 </div>
             </div>
-            <div class="Col-4">
-                <div id="btn_heineken" class="itemmarcas">
-                    <img src="../Assets/img/Cervesas/vino.png">
+            <div class="Col-6">
+                <div id="btn_heineken" class="item">
+                    <img src="../Assets/img/Productos/vino.png">
                     <p style="color:white">Heineken</p>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="Col-4">
-                <div id="btn_modelo" class="itemmarcas">
-                    <img src="../Assets/img/Cervesas/modelo%20(2).png">
+            <div class="Col-6">
+                <div id="btn_modelo" class="item">
+                    <img src="../Assets/img/Productos/modelo.png">
                     <p style="color:white">Modelo</p>
                 </div>
             </div>
         </div>
     </div>
-
     <!--tipodeproducto-->
     <div id="cat_productos">
         <div class="row">
-            <div class="Col-4">
+            <div class="Col-6">
                 <div class="item_producto" item_name="10 botes" item_quantity="0" item_price="160">
-                   <div class="producto">
-                       <img src="../Assets/img/Cervesas/tecate.png">
-                    <p style="color:white">10 botes</p>
-                   </div>
-                   <p class="item_price">$160</p>
+                    <div class="producto">
+                        <img src="../Assets/img/Productos/tecate.png">
+                        <p style="color:white">10 botes</p>
+                    </div>
+                    <p class="item_price">$160</p>
                     <div class="btn_quantity d-flex justify-content-center">
                         <label class="fa fa-minus-circle btn_menos"></label>
                         <p class="num_quantity">0</p>
                         <label class="fa fa-plus-circle btn_mas"></label>
-                        
+
                     </div>
                 </div>
-                
             </div>
-            <div class="Col-4">
+            <div class="Col-6">
                 <div class="item_producto" item_name="12 botes" item_quantity="0" item_price="150">
-                   <div class="producto">
-                        <img src="../Assets/img/Cervesas/Bud.png">
+                    <div class="producto">
+                        <img src="../Assets/img/Productos/Bud.png">
                         <p style="color:white">12 botes</p>
                     </div>
                     <p class="item_price">$150</p>
@@ -147,10 +141,10 @@
                     </div>
                 </div>
             </div>
-            <div class="Col-4">
+            <div class="Col-6">
                 <div class="item_producto" item_name="caguama indio" item_quantity="0" item_price="50">
-                   <div class="producto">
-                        <img src="../Assets/img/Cervesas/vino.png">
+                    <div class="producto">
+                        <img src="../Assets/img/Productos/vino.png">
                         <p style="color:white">caguama indio</p>
                     </div>
                     <p class="item_price">$50</p>
@@ -158,31 +152,29 @@
                         <label class="fa fa-minus-circle btn_menos"></label>
                         <p class="num_quantity">0</p>
                         <label class="fa fa-plus-circle btn_mas"></label>
-                        
+
                     </div>
                 </div>
             </div>
-            
-            <div class="Col-4">
+            <div class="Col-6">
                 <div class="item_producto" item_name="6 botes" item_quantity="0" item_price="100">
-                   <div class="producto">
-                       <img src="../Assets/img/Cervesas/tecate.png">
-                    <p style="color:white">6 botes</p>
-                   </div>
-                   <p class="item_price">$100</p>
+                    <div class="producto">
+                        <img src="../Assets/img/Productos/tecate.png">
+                        <p style="color:white">6 botes</p>
+                    </div>
+                    <p class="item_price">$100</p>
                     <div class="btn_quantity d-flex justify-content-center">
                         <label class="fa fa-minus-circle btn_menos"></label>
                         <p class="num_quantity">0</p>
                         <label class="fa fa-plus-circle btn_mas"></label>
-                        
+
                     </div>
                 </div>
-                
             </div>
-            <div class="Col-4">
+            <div class="Col-6">
                 <div class="item_producto" item_name="24 botes" item_quantity="0" item_price="60">
-                   <div class="producto">
-                        <img src="../Assets/img/Cervesas/Bud.png">
+                    <div class="producto">
+                        <img src="../Assets/img/Productos/Bud.png">
                         <p style="color:white">24 botes</p>
                     </div>
                     <p class="item_price">$60</p>
@@ -193,10 +185,10 @@
                     </div>
                 </div>
             </div>
-            <div class="Col-4">
+            <div class="Col-6">
                 <div class="item_producto" item_name="caguama tecate" item_quantity="0" item_price="31">
-                   <div class="producto">
-                        <img src="../Assets/img/Cervesas/vino.png">
+                    <div class="producto">
+                        <img src="../Assets/img/Productos/vino.png">
                         <p style="color:white">caguama tecate</p>
                     </div>
                     <p class="item_price">$31</p>
@@ -204,16 +196,12 @@
                         <label class="fa fa-minus-circle btn_menos"></label>
                         <p class="num_quantity">0</p>
                         <label class="fa fa-plus-circle btn_mas"></label>
-                        
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </div>
-
-
-
     <!-- Finalizar pedido -->
     <div class="modal fade" id="Fin_Pedido">
         <div class="modal-dialog">
@@ -224,7 +212,6 @@
 
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-
                 <!-- Modal body -->
                 <div class="modal-body">
                     <div id="div_ticket">
@@ -295,17 +282,17 @@
                     <h2 id="Total" style="Color:white">Total:</h2>
                 </div>
                 <div class="col-3">
-                    <p id="precio_total" style="Color:white;font-size: 25px;">----</p>
+                    <p id="precio_total" style="Color:white;font-size: 25px;">$ 0</p>
                 </div>
             </div>
         </div>
     </footer>
     <script src="../Assets/js/login/main-login.js"></script>
-    <script src="../Assets/js/finalizar_pedido/finalizar_pedido.js">
-    </script>
+    <script src="../Assets/js/finalizar_pedido/finalizar_pedido.js"></script>
     <script src="../Assets/js/catalogo/historial.js"></script>
+    <script src="../Assets/js/catalogo/save_items.js"></script>
     <script>
-        
+        //Scripts para animar los menus
         $("#item_cat .item").on("click", function() {
             $('#item_cat').animateCss('slideOutleft', function() {
                 $('#item_cat').css("display", "none");
@@ -314,128 +301,31 @@
 
             });
         });
-        $("#cat_marcas .itemmarcas").on("click", function() {
+        $("#cat_marcas .item").on("click", function() {
             $('#cat_marcas').animateCss('slideOutleft', function() {
                 $('#cat_marcas').css("display", "none");
                 $('#cat_productos').css("display", "block");
                 $('#cat_productos').animateCss('slideInRight');
             });
         });
-    </script>
-    
-    <script>
         //Script para el contador de los articulos al presionar el botón más
-        $(".item_producto").find(".btn_mas").click(function(){
+        $(".item_producto").find(".btn_mas").click(function() {
             var i = $(this).closest(".item_producto").find(".num_quantity").text();
             i++;
-             $(this).closest(".item_producto").find(".num_quantity").text(i);
-            
+            $(this).closest(".item_producto").find(".num_quantity").text(i);
+
             $(this).closest(".item_producto").attr("item_quantity", i);
         });
         //Script para el contador de los articulos al presionar el botón menos
-        $(".item_producto").find(".btn_menos").click(function(){
+        $(".item_producto").find(".btn_menos").click(function() {
             var i = $(this).closest(".item_producto").find(".num_quantity").text();
-            if(i > 0){
-               i--; 
+            if (i > 0) {
+                i--;
             }
             $(this).closest(".item_producto").find(".num_quantity").text(i);
             $(this).closest(".item_producto").attr("item_quantity", i);
         });
-    
-        
-      
-        function save_items(){
-            if(posicion == 2 ){
-                $('#cat_productos .item_producto').each(function(j, productos){
-                    if($(productos).attr("item_quantity") != 0)  {
-                        for (var i = 0; i<pedidos.articulo.length;i++)
-                            {
-                                if(pedidos.articulo[i].nombre_articulo == $(productos).attr("item_name")){}
-                            }
-                        
-                    }
-                });
-                //Script para añadir los articulos al pedido.
-           /*if (pedidos.articulo.length > 0){
-               var l = pedidos.articulo.length;
-               $('#cat_productos .item_producto').each(function(j, productos){
-               for(var i = 0; i < l;i++){
-                   
-                      if(pedidos.articulo[i].nombre_articulo == $(productos).attr("item_name")){
-                          if($(productos).attr("item_quantity") != 0){
-                
-                              pedidos.articulo[i].cantidad = $(productos).attr("item_quantity");
-                                
-                              return false;
-                                
-                        
-                          }else{
-                               
-                              
-                              pedidos.articulo[i].splice(i,1);
-                               return false;
-                          }
-
-                      }else{
-                          
-                          if($(productos).attr("item_quantity") != 0 ){
-                                pedidos.articulo.push({
-                                    "nombre_articulo": $(productos).attr("item_name"),
-                                    "cantidad": $(productos).attr("item_quantity"),
-                                    "precio": $(productos).attr("item_price")
-                                });
-                              
-                          /*$.each(pedidos.articulo, function(k, item){
-                              if($(productos).attr("item_name") == item.nombre_articulo ){
-                                      pedidos.articulo.push({
-                                    "nombre_articulo": $(productos).attr("item_name"),
-                                    "cantidad": $(productos).attr("item_quantity"),
-                                    "precio": $(productos).attr("item_price")
-                                });
-                                }
-                          }
-                      }
-                          
-                      });
-                   }*/
-            }
-               }else{
-                add_items();
-            }
-               
-               
-               // $.each(pedidos.articulo, function(i, item){
-        }
-        //    });
-            }
-            
-                console.log(pedidos.articulo);
-            }
-            
-                       
-                    
-                        
-                            
-                       
-                    
-            
-            
-        
-        function add_items(){
-            $('#cat_productos .item_producto').each(function(i, productos){
-                if($(productos).attr("item_quantity") != 0){
-                            pedidos.articulo.push({
-                                "nombre_articulo": $(productos).attr("item_name"),
-                                "cantidad": $(productos).attr("item_quantity"),
-                                "precio": $(productos).attr("item_price")
-                            });
-                            }
-                });
-        }
-      
     </script>
-
-
 </body>
 
 </html>
