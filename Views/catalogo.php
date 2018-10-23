@@ -326,6 +326,9 @@
             $(this).closest(".item_producto").attr("item_quantity", i);
         });
     </script>
+    <script>
+    
+    </script>
 </body>
 
 </html>

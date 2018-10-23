@@ -33,5 +33,6 @@ if (!$query) {
          
     }   
 }
+ mysqli_close($conx);
 
 ?>
