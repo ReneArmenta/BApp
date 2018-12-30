@@ -1,7 +1,12 @@
 <?php
-  
-    $usuario = "ramiro";
-    $password = "ramiro123";
+
+    //$usuario = "ramiro";
+    //$password = "ramiro123";
+    //$servidor = "localhost";
+    //$basededatos = "beerapp";
+
+    $usuario = "root";
+    $password = "";
     $servidor = "localhost";
     $basededatos = "beerapp";
 
