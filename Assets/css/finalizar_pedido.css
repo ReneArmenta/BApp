@@ -1,0 +1,130 @@
+#div_ticket h1{
+    text-align: center;
+
+}
+
+
+#div_ticket h2 
+{
+    text-decoration-line: underline;
+}
+
+
+#div_ticket .input-form{
+    width: 100%;
+    height: 35px;
+    color: #383838 !important;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #383838 !important;;
+    padding: 20px 10px;
+    margin-top: 10px;
+    font-weight: 600;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+#div_ticket .input-form:focus{
+    
+    outline-width: 0;
+    border-bottom: 2px solid  skyblue!important;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+#ticket-form input::placeholder{
+    color: #383838;
+    font-weight: 600;
+
+}
+
+#div_ticket #ticket{
+    overflow: auto;
+    margin: 30 auto;
+    width: 100%;
+    padding: 0px;
+   
+  
+}
+#div_ticket #costo-envio{
+    margin-top: 30px;
+   border: 1px solid #383838;
+}
+#div_ticket #ticket h6{
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid black;
+}
+#div_ticket #ticket h1{
+    color: #383838;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    border-bottom: 2px dotted black;
+    font-size: 32px;
+}
+
+#div_ticket #btnAccept{
+    font-size: 30px;
+    padding-bottom: 0px;
+    
+}
+#div_ticket #btnAccept:hover {
+   color: forestgreen;
+}
+
+
+#div_ticket #ticket_summary{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 10px 0px;
+}
+#div_ticket #totals p{
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+    color: darkgreen;
+    margin-top: -30px;
+    
+}
+#div_ticket #btn_order{
+    width: 100%;
+    height: 60px;
+    background-color: orange;
+    border: none;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    border-radius: 5px;
+     -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+#div_ticket #btn_order:hover{
+    background-color: forestgreen;
+}
+#div_ticket #ticket_content{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 120px;
+   
+}
+#div_ticket #costo-envio{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 10px;
+  
+}
+#div_ticket #costo-envio p{
+    margin-bottom: 0px;
+   
+}
+
+#div_ticket #costo-envio p #costo_envio{
+    color: forestgreen;
+}

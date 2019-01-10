@@ -1,0 +1,11 @@
+Ramiro:
+ - Frontend y backend de view login y usuarios
+ - backend Administradores
+Sandra:
+ - Frontend view administradores
+Rene:
+ - Diseño de tablas y backend de catalogo
+Brian:
+ - Frontend de view catalogo
+Marcos:
+ - Frontend y backend de View "Pedidos"

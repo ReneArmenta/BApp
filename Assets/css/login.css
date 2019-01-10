@@ -1,12 +1,24 @@
 #login-form input{
     width: 100%;
     height: 35px;
-    
+    color: white;
     border: none;
     background-color: transparent;
-    border-bottom: 1px solid white;
+    border-bottom: 2px solid white;
     padding: 20px 10px;
     margin-bottom: 10px;
+    font-weight: 600;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+#login-form input:focus{
+    outline-width: 0;
+    border-bottom: 2px solid dodgerblue;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 #login-form input::placeholder{
     color: white;
@@ -27,17 +39,78 @@
     margin-top: 30px;
     font-size: 20px;
     font-weight: 600;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+#login-form button:hover{
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+   
 }
 #login-form h1{
     text-align: center;
     margin-bottom: 50px;
     color: white;
 }
-#new-account-text p{
+.new-account-text{
     color: white;
     margin-top: 20px;
     text-align: center;
 }
-#new-account-text a{
-    text-decoration: none;
+.new-account-text a{
+    text-decoration: none !important;
+    color:orange;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+    
+}
+.new-account-text a:hover{
+    color: orangered;
+}
+.checkbox{
+    width: 20px !important;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 0px !important;
+}
+.check_text{
+    float: left;
+    margin-left: 10px;
+    margin-top: 6px;
+    margin-bottom: 0px;
+    
+}
+.form{
+    margin-left:auto !important;
+    margin-right: auto !important;
+    float: none !important;
+    
+}
+#login-form{
+    animation-duration: .2s;
+}
+#register-form{
+    animation-duration: .2s;
+}
+#btn-cancel{
+    background-color: #ff4d4d !important;
+    color: white !important;
+}
+#btn-cancel:hover{
+    background-color: transparent !important;
+    color: #ff4d4d !important;
+    border: 2px solid #ff4d4d !important;
+}
+#logo{
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
